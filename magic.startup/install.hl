@@ -1,0 +1,12 @@
+
+// Moves the northwind.sql file into template folder for SQL Server.
+if
+   not
+      io.file.exists:/etc/mssql/templates/northwind.sql
+   .lambda
+
+      // File doesn't exists, hence moving it.
+      io.file.move:/modules/mssql-northwind/magic.startup/northwind.sql
+         .:/etc/mssql/templates/
+      log.info:Northwind database SQL script moved into etc folder
+         filename:/etc/mssql/templates/northwind.sql

@@ -8,4 +8,4 @@ SQL Server connection, which we cannot determine with certainty that you actuall
 ## Installation
 
 Install this module in your Magic backend, open up SQL Studio, load the northwind script,
-and execute it towards a valid database SQL Server connection.
+and execute it towards a valid SQL Server connection.
